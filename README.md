@@ -9,7 +9,7 @@ A streamlit-based web application for practicing Japanese minimal pairs using th
 ### What are Minimal Pairs?
 Minimal pairs are words that differ by only one sound, such as:
 - **らか (落下)** vs **りゃく (略)** — distinguishing /ra/ from /rya/
-- **そう (沿う)** vs **そお (添う)** — recognizing long vowels
+- **こうほ (候補)** vs **こうほう (航法)** — recognizing long vowels
 
 ### The Odd-One-Out Method
 Each practice session presents you with **4 audio clips**:
