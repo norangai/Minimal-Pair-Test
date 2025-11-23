@@ -673,6 +673,7 @@ def render_feedback_ui(question):
         st.session_state.user_answer = None
         st.session_state.current_question = None
         st.session_state.current_pair_id = None
+        save_progress()  # Ensure progress is saved before moving to next question
         st.rerun()
 
 def render_scoreboard(df):
@@ -793,8 +794,12 @@ def render_session_complete_ui(df):
         col1, col2 = st.columns(2)
         
         with col1:
-            if st.button("➕ Add 5 More Questions", type="primary", use_container_width=True):
+            if st.button("➞ Add 5 More Questions", type="primary", use_container_width=True):
                 st.session_state.extra_questions_added += 5
+                # Reset question state to show next question
+                st.session_state.user_answer = None
+                st.session_state.current_question = None
+                st.session_state.current_pair_id = None
                 save_progress()
                 st.rerun()
         
